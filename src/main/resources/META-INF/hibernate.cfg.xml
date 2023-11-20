@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:33060/mydb</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">admin</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name ="show_sql">true</property>
+
+        <!--Mapeo mediante anotaciones -->
+        <mapping class="org.example.entity.Tramite"></mapping>
+        <mapping class="org.example.entity.Presupuesto"></mapping>
+        <mapping class="org.example.entity.Address"></mapping>
+        <mapping class="org.example.entity.Person"></mapping>
+    </session-factory>
+</hibernate-configuration>
