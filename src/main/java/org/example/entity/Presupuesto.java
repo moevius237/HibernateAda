@@ -11,11 +11,21 @@ import jakarta.persistence.*;
 
         private String lugar;
 
+        //Unidireccional
         @OneToOne
         @JoinColumn(name = "tramite_id")
         private Tramite tramite;
 
-        public Presupuesto(){}
+    @Override
+    public String toString() {
+        return "Presupuesto{" +
+                "id=" + id +
+                ", lugar='" + lugar + '\'' +
+                ", tramite=" + tramite +
+                '}';
+    }
+
+    public Presupuesto(){}
 
     public Tramite getTramite() {
         return tramite;

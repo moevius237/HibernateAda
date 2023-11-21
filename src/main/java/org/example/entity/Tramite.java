@@ -15,6 +15,29 @@ public class Tramite {
 
     private LocalDateTime fecha;
 
+
+    //mappedBy --> dice quien es el propietario de la relacion
+    @OneToOne(mappedBy ="")//Nombre del campo de la clase
+    private Presupuesto presupuesto;
+
+    public Presupuesto getPresupuesto() {
+        return presupuesto;
+    }
+
+    @Override
+    public String toString() {
+        return "Tramite{" +
+                "id=" + id +
+                ", tipo='" + tipo + '\'' +
+                ", fecha=" + fecha +
+                ", presupuesto=" + presupuesto +
+                '}';
+    }
+
+    public void setPresupuesto(Presupuesto presupuesto) {
+        this.presupuesto = presupuesto;
+    }
+
     public Tramite(){
 
     }
