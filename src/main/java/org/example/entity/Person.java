@@ -16,7 +16,8 @@ public class Person {
     private String name;
 
     @ManyToMany
-    @JoinTable(name = "person_has_address", joinColumns = @JoinColumn(name = "person_id")
+    @JoinTable(name = "person_has_address"
+            ,joinColumns = @JoinColumn(name = "person_id")
             ,inverseJoinColumns = @JoinColumn(name = "addresses_id"))
     private List<Address> addressList = new ArrayList<>();
 

@@ -2,6 +2,8 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "address")
 public class Address {
@@ -16,6 +18,8 @@ public class Address {
     private String number;
     public Address(){}
 
+    @ManyToMany(mappedBy = "addressList")
+    private List<Person> people;
 
     public long getId() {
         return id;

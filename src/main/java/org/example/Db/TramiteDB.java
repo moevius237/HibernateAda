@@ -8,6 +8,16 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+/*
+Creamos 2 tablas Book(id no incrementado , titulo , autor) y Chapter(id autoincrementado , paginas),
+tendran una realación, sera una relacion bidereccional
+
+-Crearemos nuestras clases en paquete db
+--create, deletebyid , getBookList, delete(Elimina libro y capitulos) --> Book
+--createList,  -->Chapter
+-Query: quiero saber cuál es el libro que tiene mas capitulos
+ */
+
 public class TramiteDB implements TramiteDBI{
 
     @Override

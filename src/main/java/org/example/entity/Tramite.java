@@ -3,6 +3,7 @@ package org.example.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "tramite")
@@ -17,8 +18,12 @@ public class Tramite {
 
 
     //mappedBy --> dice quien es el propietario de la relacion
-    @OneToOne(mappedBy ="")//Nombre del campo de la clase
+    @OneToOne(mappedBy ="tramite",
+    cascade = CascadeType.REMOVE)//Nombre del campo de la clase
     private Presupuesto presupuesto;
+
+    @OneToMany(mappedBy = "tramite")
+    private List<DiarioClientes> diarioClientes;
 
     public Presupuesto getPresupuesto() {
         return presupuesto;
@@ -31,6 +36,7 @@ public class Tramite {
                 ", tipo='" + tipo + '\'' +
                 ", fecha=" + fecha +
                 ", presupuesto=" + presupuesto +
+                ", diarioClientes=" + diarioClientes +
                 '}';
     }
 
