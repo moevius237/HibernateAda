@@ -13,5 +13,9 @@
         <mapping class="org.example.entity.Presupuesto"></mapping>
         <mapping class="org.example.entity.Address"></mapping>
         <mapping class="org.example.entity.Person"></mapping>
+        <mapping class="org.example.entity.Book"></mapping>
+        <mapping class="org.example.entity.Chapter"></mapping>
+        <mapping class="org.example.entity.DiarioClientes"></mapping>
+
     </session-factory>
 </hibernate-configuration>
