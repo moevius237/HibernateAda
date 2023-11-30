@@ -15,6 +15,11 @@ public class GenericDAOJPA<T> implements GenericDao<T> {
     public GenericDAOJPA(Class<T> entittyClass){
         this.entittyClass = entittyClass;
     }
+
+    public GenericDAOJPA() {
+
+    }
+
     @Override
     public void create(T t) throws SeveroException {
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {

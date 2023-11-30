@@ -18,6 +18,11 @@ public class Address {
     private String number;
     public Address(){}
 
+    public Address(String street, String number) {
+        this.street = street;
+        this.number = number;
+    }
+
     @ManyToMany(mappedBy = "addressList")
     private List<Person> people;
 

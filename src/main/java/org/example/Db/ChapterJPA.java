@@ -19,7 +19,6 @@ public class ChapterJPA extends GenericDAOJPA<Chapter> implements ChapterDAO{
     public ChapterJPA() {
         super(Chapter.class);
     }
-
     @Override
     public void create(Chapter chapter) {
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {
