@@ -17,7 +17,7 @@ import java.util.Set;
 
 public class BookJPA extends GenericDAOJPA<Book> implements BookDb {
     public BookJPA() {
-        super(Book.class);
+
     }
 
     @Override
